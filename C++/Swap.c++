@@ -9,6 +9,7 @@
 #include <functional> // function
 #include <iostream>   // cout, endl
 #include <list>       // list
+#include <utility>      // std::swap
 
 #include "gtest/gtest.h"
 
