@@ -27,8 +27,8 @@ INSTANTIATE_TEST_CASE_P(
     Swap_List_Instantiation,
     Swap_List_Fixture,
     Values(
-           swap<int>,
-        my_swap<int>));
+           swap<int&>,
+        my_swap<int&>));
 
 TEST_P(Swap_List_Fixture, test_1) {
     int x = 2;
