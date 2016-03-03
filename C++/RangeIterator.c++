@@ -40,6 +40,16 @@ TEST(RangeIterator_Fixture, test_4) {
     list<int> x = {2, 3, 4};
     ASSERT_TRUE(equal(RangeIterator<int>(2), RangeIterator<int>(5), x.begin()));}
 
+TEST(RangeIterator_Fixture, test_5) {
+    RangeIterator<int> b = 23456;
+    int r = b.reverseDigits();
+    ASSERT_EQ(65432, r);}
+
+TEST(RangeIterator_Fixture, test_6) {
+    RangeIterator<int> b = 234432;
+    ASSERT_TRUE(b.isPalindrome());}
+
+
 /*
 % g++ -pedantic -std=c++11 -Wall RangeIterator.c++ -o RangeIterator -lgtest_main
 

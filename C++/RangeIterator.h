@@ -53,6 +53,27 @@ class RangeIterator : public iterator<input_iterator_tag, T> {
 			return temp;
 		}
 
+		T reverseDigits() {
+			T copy = v;
+			T result = v - v;
+
+			while (copy > 0) {
+				T digit = copy % 10;
+				copy /= 10;
+				result *= 10;
+				result += digit;
+			}
+
+			return result;
+		}
+
+		bool isPalindrome() {
+			RangeIterator r = *this;
+			T copy = r.reverseDigits();
+
+			return copy == v;
+		}
+
 };
 
 
